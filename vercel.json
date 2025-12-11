@@ -1,12 +1,13 @@
 {
   "buildCommand": "pnpm run build",
   "outputDirectory": "dist/client",
-  "framework": "vite",
   "installCommand": "pnpm install",
+  "framework": "vite",
 
   "functions": {
     "api/*.ts": {
-      "runtime": "nodejs18.x"
+      "runtime": "nodejs18.x",
+      "includeFiles": "**/*.ts"
     }
   },
 
