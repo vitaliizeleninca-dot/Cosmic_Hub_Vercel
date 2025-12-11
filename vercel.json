@@ -3,11 +3,13 @@
   "outputDirectory": "dist/client",
   "framework": "vite",
   "installCommand": "pnpm install",
+
   "functions": {
     "api/*.ts": {
-      "runtime": "@vercel/node@3.0.0"
+      "runtime": "nodejs18.x"
     }
   },
+
   "rewrites": [
     { "source": "/api/save-link", "destination": "/api/save-link" },
     { "source": "/api/get-links", "destination": "/api/get-links" },
@@ -22,6 +24,7 @@
     { "source": "/admin/config.json", "destination": "/api/cms-config" },
     { "source": "/(.*)", "destination": "/index.html" }
   ],
+
   "headers": [
     {
       "source": "/admin/config.yml",
