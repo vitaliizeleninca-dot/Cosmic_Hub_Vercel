@@ -1,5 +1,8 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 
+export const config = {
+  runtime: "nodejs20.x"
+};
 interface LinksData {
   links: Array<{ url: string; date: string }>;
 }
