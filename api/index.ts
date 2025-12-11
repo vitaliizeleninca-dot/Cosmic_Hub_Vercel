@@ -1,5 +1,9 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 
+export const config = {
+  runtime: "nodejs20.x"
+};
+
 // This file is kept for backwards compatibility
 // All API routes are now in separate files in /api folder
 
