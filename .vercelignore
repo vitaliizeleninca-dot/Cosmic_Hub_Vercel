@@ -1,0 +1,39 @@
+# Dependencies
+node_modules
+.pnpm-store
+
+# Development
+.env
+.env.local
+.env.*.local
+
+# Build artifacts (except dist/client which is needed)
+dist/server
+
+# Tempo specific
+**/tempobook/dynamic/
+**/tempobook/storyboards/
+
+# Testing
+coverage
+*.log
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Config files not needed in production
+.prettierrc
+.eslintrc*
+vite.config.server.ts
+
+# Keep these for Vercel deployment:
+# - api/ (Serverless Functions)
+# - server/ (used by api/)
+# - shared/ (shared code)

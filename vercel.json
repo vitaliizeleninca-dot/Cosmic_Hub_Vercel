@@ -1,0 +1,106 @@
+{
+  "buildCommand": "pnpm run build",
+  "outputDirectory": "dist/client",
+  "framework": "vite",
+  "installCommand": "pnpm install",
+  "functions": {
+    "api/*.ts": {
+      "runtime": "@vercel/node@3"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/save-link",
+      "destination": "/api/save-link"
+    },
+    {
+      "source": "/api/get-links",
+      "destination": "/api/get-links"
+    },
+    {
+      "source": "/api/send-message",
+      "destination": "/api/send-message"
+    },
+    {
+      "source": "/api/demo",
+      "destination": "/api/demo"
+    },
+    {
+      "source": "/api/ping",
+      "destination": "/api/ping"
+    },
+    {
+      "source": "/api/menu",
+      "destination": "/api/menu"
+    },
+    {
+      "source": "/api/nft-collection",
+      "destination": "/api/nft-collection"
+    },
+    {
+      "source": "/api/youtube-duration",
+      "destination": "/api/youtube-duration"
+    },
+    {
+      "source": "/api/opensea-collection",
+      "destination": "/api/opensea-collection"
+    },
+    {
+      "source": "/health",
+      "destination": "/api/health"
+    },
+    {
+      "source": "/admin/config.json",
+      "destination": "/api/cms-config"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/admin/config.yml",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/yaml"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
+    },
+    {
+      "source": "/menu.json",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
+    },
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, POST, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Content-Type"
+        }
+      ]
+    }
+  ]
+}

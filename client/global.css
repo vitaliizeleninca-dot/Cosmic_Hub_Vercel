@@ -1,0 +1,181 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme - Dark Cosmic theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    --background: 220 20% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 25% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 25% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 270 80% 55%;
+    --primary-foreground: 220 20% 8%;
+
+    --secondary: 220 30% 20%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 20% 25%;
+    --muted-foreground: 210 20% 70%;
+
+    --accent: 270 80% 55%;
+    --accent-foreground: 220 20% 8%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 20% 20%;
+    --input: 220 20% 15%;
+    --ring: 270 80% 55%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 220 20% 10%;
+    --sidebar-foreground: 210 40% 95%;
+    --sidebar-primary: 270 80% 55%;
+    --sidebar-primary-foreground: 220 20% 8%;
+    --sidebar-accent: 270 80% 55%;
+    --sidebar-accent-foreground: 220 20% 8%;
+    --sidebar-border: 220 20% 20%;
+    --sidebar-ring: 270 80% 55%;
+
+    --cosmic-purple: 270 80% 55%;
+    --cosmic-violet: 260 60% 35%;
+    --cosmic-dark: 220 20% 8%;
+  }
+
+  .dark {
+    --background: 220 20% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 25% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 25% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 270 80% 55%;
+    --primary-foreground: 220 20% 8%;
+
+    --secondary: 220 30% 20%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 20% 25%;
+    --muted-foreground: 210 20% 70%;
+
+    --accent: 270 80% 55%;
+    --accent-foreground: 220 20% 8%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 20% 20%;
+    --input: 220 20% 15%;
+    --ring: 270 80% 55%;
+
+    --sidebar-background: 220 20% 10%;
+    --sidebar-foreground: 210 40% 95%;
+    --sidebar-primary: 270 80% 55%;
+    --sidebar-primary-foreground: 220 20% 8%;
+    --sidebar-accent: 270 80% 55%;
+    --sidebar-accent-foreground: 220 20% 8%;
+    --sidebar-border: 220 20% 20%;
+    --sidebar-ring: 270 80% 55%;
+
+    --cosmic-purple: 270 80% 55%;
+    --cosmic-violet: 260 60% 35%;
+    --cosmic-dark: 220 20% 8%;
+  }
+}
+
+@keyframes slowZoomSpace {
+  0% {
+    background-size: 100%;
+  }
+  50% {
+    background-size: 102%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+
+:root {
+  --bg-image-url: url('https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg');
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background-image:
+      linear-gradient(rgba(25, 25, 50, 0.65), rgba(25, 25, 50, 0.65)),
+      var(--bg-image-url);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    animation: slowZoomSpace 30s ease-in-out infinite;
+  }
+
+  :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  pre,
+  code {
+    overflow-x: auto;
+    white-space: pre;
+  }
+}
+
+@layer components {
+  .cosmic-glow {
+    box-shadow: 0 0 20px rgba(85, 34, 255, 0.5), 0 0 40px rgba(85, 34, 255, 0.2);
+  }
+
+  .cosmic-glow-lg {
+    box-shadow: 0 0 40px rgba(85, 34, 255, 0.6), 0 0 80px rgba(85, 34, 255, 0.3);
+  }
+
+  .neon-border {
+    border-color: hsl(var(--cosmic-purple));
+    border-width: 2px;
+  }
+
+  .gradient-cosmic {
+    background: linear-gradient(135deg, hsl(var(--cosmic-violet)), hsl(var(--cosmic-purple)));
+  }
+
+  .btn-cosmic {
+    @apply px-6 py-3 rounded-lg font-semibold transition-all duration-300;
+    background: linear-gradient(135deg, hsl(var(--cosmic-purple)), hsl(var(--cosmic-violet)));
+    color: hsl(var(--background));
+    border: 2px solid hsl(var(--cosmic-purple));
+
+    &:hover {
+      @apply cosmic-glow-lg transform -translate-y-1;
+      background: linear-gradient(135deg, hsl(var(--cosmic-violet)), hsl(var(--cosmic-purple)));
+    }
+
+    &:active {
+      @apply transform translate-y-0;
+    }
+  }
+}

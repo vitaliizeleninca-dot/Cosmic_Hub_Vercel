@@ -1,0 +1,93 @@
+podcast_videos:
+  - title: AI Art Podcast Episode 1
+    youtube_url: https://www.youtube.com/embed/jgpJVI3tDT0
+    active: true
+  - title: AI Art Podcast Episode 2
+    youtube_url: https://www.youtube.com/embed/1La4QzGeaaQ
+    active: true
+  - title: AI Art Podcast Episode 3
+    youtube_url: https://www.youtube.com/embed/TqOneWeDtFI
+    active: true
+  - title: AI Art Podcast Episode 4
+    youtube_url: https://www.youtube.com/embed/lFcSrYw-ARY
+    active: true
+
+cosmic_ambient_videos:
+  - title: Cosmic Ambient 1
+    youtube_url: ""
+    active: true
+  - title: Cosmic Ambient 2
+    youtube_url: ""
+    active: true
+  - title: Cosmic Ambient 3
+    youtube_url: ""
+    active: true
+  - title: Cosmic Ambient 4
+    youtube_url: ""
+    active: true
+
+feel_cosmos_videos:
+  - title: Feel the Cosmos 1
+    youtube_url: ""
+    active: true
+  - title: Feel the Cosmos 2
+    youtube_url: ""
+    active: true
+  - title: Feel the Cosmos 3
+    youtube_url: ""
+    active: true
+  - title: Feel the Cosmos 4
+    youtube_url: ""
+    active: true
+
+nft_videos:
+  - title: NFT Collections Video 1
+    youtube_url: ""
+    active: true
+  - title: NFT Collections Video 2
+    youtube_url: ""
+    active: true
+  - title: NFT Collections Video 3
+    youtube_url: ""
+    active: true
+  - title: NFT Collections Video 4
+    youtube_url: ""
+    active: true
+
+nft_collections:
+  - name: Collection 1
+    url: ""
+    image_url: ""
+    active: true
+  - name: Collection 2
+    url: ""
+    image_url: ""
+    active: true
+  - name: Collection 3
+    url: ""
+    image_url: ""
+    active: true
+  - name: Collection 4
+    url: ""
+    image_url: ""
+    active: true
+  - name: Collection 5
+    url: ""
+    image_url: ""
+    active: true
+  - name: Collection 6
+    url: ""
+    image_url: ""
+    active: true
+
+social_links:
+  twitter: ""
+  youtube: ""
+  threads: ""
+  facebook: ""
+  telegram: ""
+  tiktok: ""
+  discord: ""
+  linkedin: ""
+  contra: ""
+  webbie: ""

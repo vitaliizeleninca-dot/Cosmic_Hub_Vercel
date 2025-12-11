@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Cosmic Hub - Content Manager</title>
+    <link rel="icon" href="data:," />
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  </head>
+  <body>
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+      // Configure Decap CMS with inline config
+      if (window.CMS) {
+        window.CMS.init({
+          config: {
+            backend: {
+              name: "github",
+              repo: "username/repo",
+              branch: "main",
+              auth_endpoint: "api/auth",
+            },
+            media_folder: "public/uploads",
+            public_path: "/uploads",
+            publish_mode: "editorial_workflow",
+            collections: [
+              {
+                name: "menu",
+                label: "Menu Content",
+                folder: "data",
+                create: false,
+                files: [
+                  {
+                    name: "menu",
+                    label: "Menu Items",
+                    file: "data/menu.yml",
+                    fields: [
+                      {
+                        label: "Podcast Videos",
+                        name: "podcast_videos",
+                        widget: "list",
+                        fields: [
+                          { label: "Title", name: "title", widget: "string" },
+                          {
+                            label: "YouTube URL",
+                            name: "youtube_url",
+                            widget: "string",
+                          },
+                          {
+                            label: "Active",
+                            name: "active",
+                            widget: "boolean",
+                            default: true,
+                          },
+                        ],
+                      },
+                      {
+                        label: "Cosmic Ambient Videos",
+                        name: "cosmic_ambient_videos",
+                        widget: "list",
+                        fields: [
+                          { label: "Title", name: "title", widget: "string" },
+                          {
+                            label: "YouTube URL",
+                            name: "youtube_url",
+                            widget: "string",
+                          },
+                          {
+                            label: "Active",
+                            name: "active",
+                            widget: "boolean",
+                            default: true,
+                          },
+                        ],
+                      },
+                      {
+                        label: "Feel Cosmos Videos",
+                        name: "feel_cosmos_videos",
+                        widget: "list",
+                        fields: [
+                          { label: "Title", name: "title", widget: "string" },
+                          {
+                            label: "YouTube URL",
+                            name: "youtube_url",
+                            widget: "string",
+                          },
+                          {
+                            label: "Active",
+                            name: "active",
+                            widget: "boolean",
+                            default: true,
+                          },
+                        ],
+                      },
+                      {
+                        label: "NFT Collections Videos",
+                        name: "nft_videos",
+                        widget: "list",
+                        fields: [
+                          { label: "Title", name: "title", widget: "string" },
+                          {
+                            label: "YouTube URL",
+                            name: "youtube_url",
+                            widget: "string",
+                          },
+                          {
+                            label: "Active",
+                            name: "active",
+                            widget: "boolean",
+                            default: true,
+                          },
+                        ],
+                      },
+                      {
+                        label: "NFT Collections (Grid)",
+                        name: "nft_collections",
+                        widget: "list",
+                        fields: [
+                          {
+                            label: "Collection Name",
+                            name: "name",
+                            widget: "string",
+                          },
+                          {
+                            label: "Collection URL",
+                            name: "url",
+                            widget: "string",
+                          },
+                          {
+                            label: "Image URL",
+                            name: "image_url",
+                            widget: "string",
+                            required: false,
+                          },
+                          {
+                            label: "Active",
+                            name: "active",
+                            widget: "boolean",
+                            default: true,
+                          },
+                        ],
+                      },
+                      {
+                        label: "Social Links",
+                        name: "social_links",
+                        widget: "object",
+                        fields: [
+                          {
+                            label: "Twitter",
+                            name: "twitter",
+                            widget: "string",
+                            required: false,
+                          },
+                          {
+                            label: "YouTube",
+                            name: "youtube",
+                            widget: "string",
+                            required: false,
+                          },
+                          {
+                            label: "Threads",
+                            name: "threads",
+                            widget: "string",
+                            required: false,
+                          },
+                          {
+                            label: "Facebook",
+                            name: "facebook",
+                            widget: "string",
+                            required: false,
+                          },
+                          {
+                            label: "Telegram",
+                            name: "telegram",
+                            widget: "string",
+                            required: false,
+                          },
+                          {
+                            label: "TikTok",
+                            name: "tiktok",
+                            widget: "string",
+                            required: false,
+                          },
+                          {
+                            label: "Discord",
+                            name: "discord",
+                            widget: "string",
+                            required: false,
+                          },
+                          {
+                            label: "LinkedIn",
+                            name: "linkedin",
+                            widget: "string",
+                            required: false,
+                          },
+                          {
+                            label: "Contra",
+                            name: "contra",
+                            widget: "string",
+                            required: false,
+                          },
+                          {
+                            label: "Webbie",
+                            name: "webbie",
+                            widget: "string",
+                            required: false,
+                          },
+                        ],
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+        });
+      }
+    </script>
+  </body>
+</html>
