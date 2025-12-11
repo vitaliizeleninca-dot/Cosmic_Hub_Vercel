@@ -1,4 +1,8 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
+
+export const config = {
+  runtime: "nodejs20.x"
+};
 import fs from "fs";
 import path from "path";
 import yaml from "js-yaml";
